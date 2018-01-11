@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {     // 编译器配置，node是不能解析typescript的
+    "module": "commonjs",  // 模块规范
+    "target": "es5",       // 编译为ES5
+    "sourceMap": true,
+    "lib": ["es6"],        // 使用es6的语法
+    "outDir": "build",     // 编译后输出文件位置
+    // 下面两个是与装饰器有关的
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [  // 编译排除文件
+    "node_modules"
+  ]
+}
+
+// 此文件要在webstrom中设置，使用自己的tsconfig.json文件
