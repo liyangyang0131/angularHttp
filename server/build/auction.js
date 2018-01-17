@@ -24,13 +24,13 @@ var products = [
 app.get('/', function (req, res) {
     res.send('hello express');
 });
-app.get('/products', function (req, res) {
+app.get('/api/products', function (req, res) {
     res.json(products);
 });
-app.get('/product/:id', function (req, res) {
+app.get('/api/product/:id', function (req, res) {
     res.json(products.find(function (product) {
         return product.id = req.params.id;
     }));
 });
-app.listen('9000');
+app.listen('8000');
 //# sourceMappingURL=auction.js.map

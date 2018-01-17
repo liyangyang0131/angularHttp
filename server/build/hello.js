@@ -4,5 +4,5 @@ var http = require("http");
 var server = http.createServer(function (request, response) {
     response.end("hello node");
 });
-server.listen(9000);
+server.listen(8000);
 //# sourceMappingURL=hello.js.map
