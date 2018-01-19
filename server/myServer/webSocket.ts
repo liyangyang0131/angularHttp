@@ -3,7 +3,7 @@ import {Server} from 'ws';
 
 const app = express();
 
-const wsServer = new Server({port: 8900});
+const wsServer = new Server({port: 8900});  // 声明一个8900端口号的服务器
 wsServer.on('connection', websocket => {
     websocket.send(Math.random());   //向客户端推送消息
     websocket.on('message', message => {
@@ -18,4 +18,5 @@ setInterval(()=>{
         })
     }
 },1000);
+
 app.listen('4000');

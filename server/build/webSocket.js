@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
 var ws_1 = require("ws");
 var app = express();
-var wsServer = new ws_1.Server({ port: 8900 });
+var wsServer = new ws_1.Server({ port: 8900 }); // 声明一个8900端口号的服务器
 wsServer.on('connection', function (websocket) {
     websocket.send(Math.random()); //向客户端推送消息
     websocket.on('message', function (message) {
